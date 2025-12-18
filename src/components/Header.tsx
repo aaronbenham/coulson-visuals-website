@@ -9,7 +9,7 @@ import { useScrollDirection } from "../hooks/useScrollDirection";
 export default function Header() {
   const [open, setOpen] = useState(false);
   
-  const showHeader = useScrollDirection(20);
+  const showHeader = useScrollDirection();
 
   useEffect(() => {
     if (open) document.body.style.overflow = "hidden";
@@ -26,15 +26,15 @@ export default function Header() {
         ${showHeader ? "translate-y-0 shadow-lg shadow-black/20" : "-translate-y-full"}`}
     >
         <div className="pt-[env(safe-area-inset-top)]">
-          <div className="relative w-full border-b border-white/10 bg-black/60 backdrop-blur-xl">
+          <div className="relative w-full py-2 border-b border-white/10 bg-black/60 backdrop-blur-xl">
             <div className="relative flex items-center px-3">
                 {/* Logo */}
                 <Link href="/" className="z-10 flex items-center">
                     <Image
                         src="/logos/no-background-logo-cropped.png"
                         alt="Coulson Visuals logo"
-                        width={170}
-                        height={85}
+                        width={200}
+                        height={25}
                         priority
                     />
                 </Link>

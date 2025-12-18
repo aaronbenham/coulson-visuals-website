@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-export function useScrollDirection(threshold = 8) {
+export function useScrollDirection(threshold = 6) {
   const [show, setShow] = useState(false);
   const lastY = useRef(0);
   const ticking = useRef(false);
@@ -18,12 +18,13 @@ export function useScrollDirection(threshold = 8) {
         const y = window.scrollY;
         const delta = y - lastY.current;
 
-        if (Math.abs(delta) > threshold) {
-          // show at top, show when scrolling up, hide when scrolling down
-          setShow(y < 10 || delta < 0);
-          lastY.current = y;
+        if (y === 0) {
+          setShow(false);
+        } else if (Math.abs(delta) > threshold) {
+          setShow(delta < 0);
         }
 
+        lastY.current = y;
         ticking.current = false;
       });
     };

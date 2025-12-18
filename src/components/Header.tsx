@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 import { useScrollDirection } from "../hooks/useScrollDirection";
 
@@ -23,32 +24,39 @@ export default function Header() {
     <header
         className={`fixed top-0 inset-x-0 z-50 transition-transform duration-300 will-change-transform
         ${showHeader ? "translate-y-0 shadow-lg shadow-black/20" : "-translate-y-full"}`}
-        
-        >
+    >
         <div className="pt-[env(safe-area-inset-top)]">
-            <div className="w-full border-b border-white/10 bg-black/60 backdrop-blur-xl">
-            <div className="flex items-center justify-between px-4 py-3">
+          <div className="relative w-full border-b border-white/10 bg-black/60 backdrop-blur-xl">
+            <div className="relative flex items-center px-3">
                 {/* Logo */}
-                <Link href="/" className="text-sm font-semibold tracking-[0.14em]">
-                COULSON VISUALS
+                <Link href="/" className="z-10 flex items-center">
+                    <Image
+                        src="/logos/no-background-logo-cropped.png"
+                        alt="Coulson Visuals logo"
+                        width={170}
+                        height={85}
+                        priority
+                    />
                 </Link>
 
                 {/* Burger */}
-                <button
-                aria-label="Open menu"
-                aria-expanded={open}
-                onClick={() => setOpen(v => !v)}
-                className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/15 bg-white/5"
-                >
-                <div className="space-y-1.5">
-                    <div className="h-0.5 w-5 bg-white" />
-                    <div className="h-0.5 w-5 bg-white" />
-                    <div className="h-0.5 w-5 bg-white" />
+                <div className="ml-auto z-10">
+                    <button
+                        aria-label="Open menu"
+                        aria-expanded={open}
+                        onClick={() => setOpen(v => !v)}
+                        className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/15 bg-white/5"
+                        >
+                        <div className="space-y-1.5">
+                            <div className="h-0.5 w-5 bg-white" />
+                            <div className="h-0.5 w-5 bg-white" />
+                            <div className="h-0.5 w-5 bg-white" />
+                        </div>
+                    </button>
                 </div>
-                </button>
             </div>
+          </div>
         </div>
-    </div>
 
       {/* Mobile menu */}
       {open && (

@@ -6,7 +6,7 @@ export default function HomePage() {
       <VideoHero />
 
       {/* Content section that overlaps the video */}
-      <section className="relative z-20 -mt-16 sm:-mt-24">
+      <section className="relative z-20 -mt-16 sm:-mt-18">
         <div className="mx-auto max-w-6xl px-4 pb-20">
           <div className="rounded-3xl border border-white/10 bg-black/80 backdrop-blur-xl shadow-2xl">
             <div className="p-6 sm:p-10">

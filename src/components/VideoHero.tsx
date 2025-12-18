@@ -37,12 +37,12 @@ export default function VideoHero() {
     };
   }, []);
 
-  const videoSrc = useMemo(() => "/portfolio/hydrogen.mp4", []);
+  const videoSrc = useMemo(() => "/portfolio/Example Video.mp4", []);
 
   return (
-    <section ref={heroRef} className="relative h-[92svh] min-h-[640px] overflow-hidden">
+    <section ref={heroRef} className="relative h-[100svh] min-h-[640px] overflow-hidden">
       {/* Sticky video layer */}
-      <div className="sticky top-0 h-[92svh] min-h-[640px]">
+      <div className="sticky top-0 h-[100svh] min-h-[640px]">
         <div className="absolute inset-0">
           <video
             className="h-full w-full object-cover"
@@ -66,20 +66,20 @@ export default function VideoHero() {
         </div>
 
         {/* Hero content */}
-        <div className="relative z-10 mx-auto flex h-full max-w-6xl flex-col justify-end px-4 pb-16 sm:pb-30">
+        <div className="relative z-10 mx-auto flex h-full max-w-6xl flex-col justify-end px-4 pb-20 pt-20 sm:pt-30 sm:pb-24">
           <div className="max-w-xl">
-            <p className="text-xs font-semibold tracking-[0.18em] text-white/80">
+            <p className="fade-up fade-delay-1 text-xs font-semibold tracking-[0.18em] text-white/80">
               COULSON VISUALS
             </p>
-            <h1 className="mt-3 text-3xl font-semibold tracking-tight sm:text-5xl">
+            <h1 className="fade-up fade-delay-2 mt-3 text-3xl font-semibold tracking-tight sm:text-5xl">
               Premium automotive & exotic car photography
             </h1>
-            <p className="mt-4 text-sm leading-relaxed text-white/75 sm:text-base">
+            <p className="fade-up fade-delay-2 mt-4 text-sm leading-relaxed text-white/75 sm:text-base">
               Cinematic visuals for detailers, collectors, and brands — built for social,
               web, and premium marketing.
             </p>
 
-            <div className="relative z-30 mt-6 flex flex-col gap-3 sm:flex-row">
+            <div className="fade-up fade-delay-3 relative z-30  mt-6 flex flex-col gap-3 sm:flex-row">
               <a
                 href="/contact"
                 className="inline-flex items-center justify-center rounded-2xl bg-white px-5 py-3 text-sm font-semibold text-black"

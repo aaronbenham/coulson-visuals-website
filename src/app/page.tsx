@@ -1,56 +1,118 @@
 import VideoHero from "../components/VideoHero";
+import AutoScrollStrip from "../components/AutoScrollStrip";
 
 export default function HomePage() {
   return (
     <main>
       <VideoHero />
 
-      {/* Content section that overlaps the video */}
-      <section className="relative z-20 -mt-16 sm:-mt-18">
-        <div className="mx-auto max-w-6xl px-4 pb-20">
+      {/* EXPERIENCE section that overlaps the video */}
+      <section className="relative z-20 -mt-16 sm:-mt-24">
+        <div className="mx-auto max-w-6xl px-4 pb-16">
+
+          {/* Cinematic image strip (use your own images) */}
+          <div className="my-6 overflow-hidden rounded-3xl border border-white/10 bg-white/5">
+            <AutoScrollStrip
+              images={[
+                { src: "/auto-scroll/amg.webp", alt: "AMG detail shot" },
+                { src: "/auto-scroll/Brands HAtch-43.jpg" },
+                { src: "/auto-scroll/Drfit MotoGp-4.jpg" },
+                { src: "/auto-scroll/Drfit MotoGp-5.jpg" },
+                { src: "/auto-scroll/Drfit MotoGp-8.jpg" },
+                { src: "/auto-scroll/EDP Amg One-9.jpg" },
+                { src: "/auto-scroll/EDP Amg One-10.jpg" },
+              ]}
+              speedPxPerSec={32}
+            />
+          </div>
+
+          {/* Main premium card */}
           <div className="rounded-3xl border border-white/10 bg-black/80 backdrop-blur-xl shadow-2xl">
             <div className="p-6 sm:p-10">
-              <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">
-                Premium automotive visuals — built for brands and bookings
-              </h2>
-              <p className="mt-3 text-sm sm:text-base text-white/75 leading-relaxed">
-                High-end photography and short-form video for car detailers, exotic
-                owners, performance garages and dealerships. Clean delivery, consistent
-                quality, and a process designed to make you look premium.
-              </p>
+              <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
 
-              <div className="mt-8 grid gap-4 sm:grid-cols-3">
-                {[
-                  { title: "Detailer Packages", desc: "Content designed for monthly marketing and reels." },
-                  { title: "Exotic Shoots", desc: "Cinematic imagery with strong composition and lighting." },
-                  { title: "Brand Content", desc: "Launch-ready visuals for web, social and print." },
-                ].map((c) => (
-                  <div
-                    key={c.title}
-                    className="rounded-2xl border border-white/10 bg-white/5 p-5"
-                  >
-                    <h3 className="text-base font-semibold">{c.title}</h3>
-                    <p className="mt-2 text-sm text-white/70">{c.desc}</p>
+                {/* Left: message + CTA */}
+                <div>
+                  <p className="text-xs font-semibold tracking-[0.18em] text-white/70">
+                    THE COULSON EXPERIENCE
+                  </p>
+
+                  <h2 className="mt-3 text-2xl sm:text-3xl font-semibold tracking-tight">
+                    Premium automotive visuals — built for brands and bookings
+                  </h2>
+
+                  <p className="mt-4 text-sm sm:text-base text-white/75 leading-relaxed">
+                    High-end photography and short-form video for car detailers, exotic
+                    owners, performance garages and dealerships. Clean delivery, consistent
+                    quality, and a process designed to make you look premium.
+                  </p>
+
+                  <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                    <a
+                      href="/contact"
+                      className="inline-flex items-center justify-center rounded-2xl bg-accent px-5 py-3 text-sm font-semibold text-black transition-all hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+                    >
+                      Book a shoot
+                    </a>
+                    <a
+                      href="/portfolio"
+                      className="inline-flex items-center justify-center rounded-2xl border border-accent/40 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent/10"
+                    >
+                      View portfolio
+                    </a>
                   </div>
-                ))}
-              </div>
+                </div>
 
-              <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-                <a
-                  href="/contact"
-                  className="inline-flex items-center justify-center rounded-2xl bg-white px-5 py-3 text-sm font-semibold text-black"
-                >
-                  Book a shoot
-                </a>
-                <a
-                  href="/portfolio"
-                  className="inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white"
-                >
-                  View portfolio
-                </a>
+                {/* Right: service tiles (more bespoke) */}
+                <div className="grid gap-3 sm:grid-cols-2">
+                  {[
+                    { title: "Detailer Packages", desc: "Monthly content designed for bookings & reels." },
+                    { title: "Exotic Shoots", desc: "Cinematic imagery with premium composition." },
+                    { title: "Brand Content", desc: "Launch-ready visuals for web, social & print." },
+                    { title: "Performance Analytics", desc: "What posts convert + content direction." },
+                  ].map((c) => (
+                    <div
+                      key={c.title}
+                      className="rounded-2xl border border-white/10 bg-white/5 p-5 transition-transform hover:-translate-y-0.5"
+                    >
+                      <h3 className="text-base font-semibold">{c.title}</h3>
+                      <p className="mt-2 text-sm text-white/70">{c.desc}</p>
+                    </div>
+                  ))}
+                </div>
+
               </div>
             </div>
           </div>
+
+          {/* 4-step roadmap (phase 1-2-3-4) */}
+          <div className="mt-8 rounded-3xl border border-white/10 bg-white/5 p-6 sm:p-8">
+            <h3 className="text-lg sm:text-xl font-semibold">The 4-phase process</h3>
+            <p className="mt-2 text-sm text-white/70">
+              A simple, repeatable system that keeps quality high and turnaround fast.
+            </p>
+
+            <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                { n: "01", t: "Discovery", d: "Goal, vibe, platform, shot list." },
+                { n: "02", t: "Shoot Day", d: "Direction, lighting, cinematic capture." },
+                { n: "03", t: "Edit & Deliver", d: "Premium edits, web-ready exports." },
+                { n: "04", t: "Analytics", d: "Review performance + next shoot plan." },
+              ].map((s) => (
+                <div key={s.n} className="rounded-2xl border border-white/10 bg-black/40 p-5">
+                  <div className="flex items-baseline justify-between">
+                    <span className="text-xs font-semibold tracking-[0.18em] text-white/60">
+                      PHASE
+                    </span>
+                    <span className="text-sm font-semibold text-accent">{s.n}</span>
+                  </div>
+                  <h4 className="mt-3 text-base font-semibold">{s.t}</h4>
+                  <p className="mt-2 text-sm text-white/70">{s.d}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
       </section>
 

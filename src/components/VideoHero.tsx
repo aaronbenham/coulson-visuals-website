@@ -68,27 +68,27 @@ export default function VideoHero() {
         {/* Hero content */}
         <div className="relative z-10 mx-auto flex h-full max-w-6xl flex-col justify-end px-4 pb-20 pt-20 sm:pt-30 sm:pb-24">
           <div className="max-w-xl">
-            <p className="fade-up fade-delay-1 text-xs font-semibold tracking-[0.18em] text-white/80">
+            <p className="fade-up fade-delay-1 text-xs font-semibold tracking-[0.18em] text-white/80 italic">
               COULSON VISUALS
             </p>
-            <h1 className="fade-up fade-delay-2 mt-3 text-3xl font-semibold tracking-tight sm:text-5xl">
-              Premium automotive & exotic car photography
+            <h1 className="fade-up fade-delay-2 mt-3 pb-1 text-3xl font-semibold tracking-tight sm:text-5xl bg-gradient-to-r to-white from-accent bg-clip-text text-transparent">
+              Premium Automotive & Exotic Car Photography
             </h1>
-            <p className="fade-up fade-delay-2 mt-4 text-sm leading-relaxed text-white/75 sm:text-base">
-              Cinematic visuals for detailers, collectors, and brands — built for social,
-              web, and premium marketing.
+            <p className="fade-up fade-delay-2 mt-2 text-sm leading-relaxed text-white/75 sm:text-base">
+              Cinematic visuals for detailers, dealerships, and luxury brands. Tailored for social media,
+              web design, and premium marketing.
             </p>
 
             <div className="fade-up fade-delay-3 relative z-30  mt-6 flex flex-col gap-3 sm:flex-row">
               <a
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-2xl bg-white px-5 py-3 text-sm font-semibold text-black"
+                className="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold bg-accent text-black hover:bg-accent/90"
               >
                 Book a shoot
               </a>
               <a
                 href="/portfolio"
-                className="inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white"
+                className="inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10"
               >
                 View portfolio
               </a>

@@ -1,5 +1,6 @@
 import VideoHero from "../components/VideoHero";
 import AutoScrollStrip from "../components/AutoScrollStrip";
+import QualityDial from "../components/QualityDial";
 
 export default function HomePage() {
   return (
@@ -113,6 +114,13 @@ export default function HomePage() {
           </div>
 
         </div>
+      </section>
+
+      <section className="relative z-20 -mt-10 sm:-mt-20 pb-16">
+        <QualityDial
+          beforeSrc="/quality-dial/before.webp"
+          afterSrc="/quality-dial/after.webp"
+        />
       </section>
 
       {/* Extra sections for scrolling + SEO text (important) */}

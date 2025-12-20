@@ -8,23 +8,7 @@ export default function HomePage() {
 
       {/* EXPERIENCE section that overlaps the video */}
       <section className="relative z-20 -mt-16 sm:-mt-24">
-        <div className="mx-auto max-w-6xl px-4 pb-16">
-
-          {/* Cinematic image strip (use your own images) */}
-          <div className="my-6 overflow-hidden rounded-3xl border border-white/10 bg-white/5">
-            <AutoScrollStrip
-              images={[
-                { src: "/auto-scroll/amg.webp", alt: "AMG detail shot" },
-                { src: "/auto-scroll/Brands HAtch-43.jpg" },
-                { src: "/auto-scroll/Drfit MotoGp-4.jpg" },
-                { src: "/auto-scroll/Drfit MotoGp-5.jpg" },
-                { src: "/auto-scroll/Drfit MotoGp-8.jpg" },
-                { src: "/auto-scroll/EDP Amg One-9.jpg" },
-                { src: "/auto-scroll/EDP Amg One-10.jpg" },
-              ]}
-              speedPxPerSec={32}
-            />
-          </div>
+        <div className="mx-auto max-w-6xl px-4 py-16">
 
           {/* Main premium card */}
           <div className="rounded-3xl border border-white/10 bg-black/80 backdrop-blur-xl shadow-2xl">
@@ -83,6 +67,21 @@ export default function HomePage() {
 
               </div>
             </div>
+          </div>
+
+          {/* Cinematic image strip (use your own images) */}
+          <div className="my-6 overflow-hidden rounded-3xl border border-white/10 bg-white/5">
+            <AutoScrollStrip
+              images={[
+                { src: "/auto-scroll/amg-1.webp", alt: "AMG detail shot" },
+                { src: "/auto-scroll/brands-hatch-67.webp", alt: "AMG detail shot" },
+                { src: "/auto-scroll/drfit-motogp-4.webp", alt: "AMG detail shot" },
+                { src: "/auto-scroll/amg-2.webp", alt: "AMG detail shot" },
+                { src: "/auto-scroll/mx5-poster-pic-1.webp", alt: "AMG detail shot" },
+                { src: "/auto-scroll/car-motogp.webp", alt: "AMG detail shot" },
+              ]}
+              speedPxPerSec={32}
+            />
           </div>
 
           {/* 4-step roadmap (phase 1-2-3-4) */}

@@ -47,7 +47,7 @@ export default function Header() {
             {/* Logo */}
             <Link href="/" className="z-10 flex items-center" onClick={() => setOpen(false)}>
               <Image
-                src="/logos/no-background-logo-cropped.png"
+                src="/logos/no-background-logo-cropped.webp"
                 alt="Coulson Visuals logo"
                 width={200}
                 height={25}
@@ -96,7 +96,7 @@ export default function Header() {
               transition={{ type: "spring", stiffness: 520, damping: 40 }}
             >
               <div className="mx-auto lg:max-w-6xl px-3 sm:px-4">
-                <div className="mt-2 rounded-3xl border border-white/10 bg-black/90 backdrop-blur-xl shadow-2xl">
+                <div className="mt-2 rounded-3xl border border-white/10 bg-black shadow-2xl">
                   <nav className="p-3 grid gap-2 text-base">
                     <Link
                       onClick={() => setOpen(false)}

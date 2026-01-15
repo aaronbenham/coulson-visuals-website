@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://example.com"), // EXAMPLE
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-full bg-black text-white antialiased">
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -37,7 +37,7 @@ export default function VideoHero() {
     };
   }, []);
 
-  const videoSrc = useMemo(() => "/main-video/audi-s3-25fps-1080p.mp4", []);
+  const videoSrc = useMemo(() => "/main-video/audi ad logo white.mp4", []);
 
   return (
     <section ref={heroRef} className="relative h-[100svh] min-h-[640px] overflow-hidden">
@@ -71,8 +71,8 @@ export default function VideoHero() {
             <p className="fade-up fade-delay-1 text-xs font-semibold tracking-[0.18em] text-white/80 italic">
               COULSON VISUALS
             </p>
-            <h1 className="fade-up fade-delay-2 mt-3 pb-1 text-3xl font-semibold tracking-tight sm:text-5xl bg-gradient-to-r to-white from-accent bg-clip-text text-transparent">
-              Premium Automotive & Exotic Car Photography
+            <h1 className="fade-up fade-delay-2 mt-3 pb-1 text-3xl font-semibold tracking-tight sm:text-4xl bg-gradient-to-r to-white from-accent bg-clip-text text-transparent">
+              Premium Automotive & Exotic Car Content Creation
             </h1>
             <p className="fade-up fade-delay-2 mt-2 text-sm leading-relaxed text-white/75 sm:text-base">
               Cinematic visuals for detailers, dealerships, and luxury brands. Tailored for social media,

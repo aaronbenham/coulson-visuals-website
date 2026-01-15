@@ -28,9 +28,10 @@ export default function QualityDial({
 
     useEffect(() => {
     const update = () => {
-        if (!wrapRef.current) return;
-        const w = wrapRef.current.getBoundingClientRect().width;
-        setPxLeft((w * value) / 100);
+      if (!wrapRef.current) return;
+      const w = wrapRef.current.getBoundingClientRect().width;
+      const THUMB_RADIUS = 13; // match globals.css thumb size/2
+      setPxLeft(THUMB_RADIUS + (w - THUMB_RADIUS * 2) * (value / 100));
     };
     update();
     window.addEventListener("resize", update);
@@ -114,7 +115,7 @@ export default function QualityDial({
             )}
 
             {/* Slider (no horizontal padding so line aligns) */}
-            <div className="absolute inset-x-0 bottom-0 p-4">
+            <div className="absolute inset-x-0 bottom-0 px-0 pb-4">
             <label htmlFor={id} className="sr-only">
                 Quality dial (before/after)
             </label>

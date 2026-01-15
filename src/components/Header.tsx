@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 
 import { useScrollDirection } from "../hooks/useScrollDirection";
+import NavAnchorLink from "./NavAnchorLink";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -100,10 +101,10 @@ export default function Header() {
                   <nav className="p-3 grid gap-2 text-base">
                     <Link
                       onClick={() => setOpen(false)}
-                      href="/portfolio"
+                      href="/"
                       className="rounded-2xl bg-white/5 px-4 py-3 hover:bg-white/10 transition-colors"
                     >
-                      Portfolio
+                      Home
                     </Link>
                     <Link
                       onClick={() => setOpen(false)}
@@ -112,16 +113,15 @@ export default function Header() {
                     >
                       Services
                     </Link>
-                    <Link
-                      onClick={() => setOpen(false)}
-                      href="/about"
-                      className="rounded-2xl bg-white/5 px-4 py-3 hover:bg-white/10 transition-colors"
-                    >
+                    <NavAnchorLink href="/services/#FAQ" onNavigate={() => setOpen(false)} className="rounded-2xl bg-white/5 px-4 py-3 hover:bg-white/10 transition-colors">
+                      FAQ
+                    </NavAnchorLink>
+                    <NavAnchorLink href="/#about" onNavigate={() => setOpen(false)} className="rounded-2xl bg-white/5 px-4 py-3 hover:bg-white/10 transition-colors">
                       About
-                    </Link>
+                    </NavAnchorLink>
                     <Link
                       onClick={() => setOpen(false)}
-                      href="/contact"
+                      href="/services"
                       className="rounded-2xl bg-accent px-4 py-3 font-semibold text-black hover:brightness-110 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-black"
                     >
                       Book a shoot

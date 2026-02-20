@@ -7,7 +7,7 @@ export default function ServicesCTA() {
     <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-black/70 p-6 sm:p-10">
       <div className="pointer-events-none absolute -inset-24 bg-[radial-gradient(circle_at_30%_20%,rgba(53,178,223,0.18),transparent_60%)]" />
       <div className="relative">
-        <p className="text-xs font-semibold tracking-[0.18em] text-white/60">
+        <p className="text-xs font-semibold italic tracking-[0.18em] text-white/60">
           READY
         </p>
         <h2 className="mt-2 text-xl sm:text-2xl font-semibold">
@@ -26,10 +26,10 @@ export default function ServicesCTA() {
             Book a shoot
           </Link>
           <Link
-            href="/portfolio"
-            className="inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+            href="/contact"
+              className="inline-flex items-center justify-center rounded-2xl border border-accent/40 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent/10"
           >
-            View portfolio
+            Enquire Now
           </Link>
         </div>
       </div>

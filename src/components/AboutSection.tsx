@@ -49,15 +49,16 @@ export default function AboutSection() {
           </p>
 
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-            <Link
-              href="/portfolio"
+            <a 
               className="inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
-            >
-              View portfolio
-            </Link>
+              target="_blank" 
+              href="https://coulsonvisuals.com/" 
+              rel="noopener noreferrer">
+                View Portfolio
+            </a>
 
             <Link
-              href="/contact"
+              href="/services"
               className="inline-flex items-center justify-center rounded-2xl bg-accent px-5 py-3 text-sm font-semibold text-black transition-all hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-black"
             >
               Work with me

@@ -12,14 +12,14 @@ export const metadata = {
 
 export default function ServicesPage() {
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="relative min-h-screen bg-black text-white overflow-hidden">
+      {/* Page-wide background (same glow style as ServicesCTA) */}
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute -inset-24 blur-2xl bg-[radial-gradient(circle_at_30%_20%,rgba(53,178,223,0.18),transparent_35%)] " />
+      </div>
+
       {/* Hero */}
-      <section className="relative overflow-hidden">
-        {/* Subtle background treatment */}
-        <div className="pointer-events-none absolute inset-0">
-          <div className="absolute -top-40 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(53,178,223,0.18),transparent_60%)] blur-2xl" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black via-black to-black" />
-        </div>
+      <section className="relative">
 
         <div className="relative mx-auto max-w-6xl px-4 pt-20 pb-10 sm:pt-24 sm:pb-12">
           <p className="text-xs font-semibold italic tracking-[0.18em] text-white/60">
@@ -44,12 +44,13 @@ export default function ServicesPage() {
               Book a shoot
             </Link>
 
-            <Link
-              href="/portfolio"
-              className="inline-flex items-center justify-center rounded-2xl border border-accent/40 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent/10"
-            >
-              View portfolio
-            </Link>
+            <a 
+              className="inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+              target="_blank" 
+              href="https://coulsonvisuals.com/" 
+              rel="noopener noreferrer">
+                View Portfolio
+            </a>
           </div>
 
           {/* Micro trust strip */}

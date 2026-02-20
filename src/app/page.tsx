@@ -4,6 +4,7 @@ import QualityDial from "../components/QualityDial";
 import ProcessRoadmap from "../components/ServiceSection";
 import ExperienceCard from "../components/ExperienceCard";
 import AboutSection from "../components/AboutSection";
+import ServicesCTA from "../components/ServicesCTA";
 
 export default function HomePage() {
   return (
@@ -47,7 +48,11 @@ export default function HomePage() {
       </section>
 
       <AboutSection />
-      
+
+      <section className="mx-auto max-w-6xl px-4 pb-16">
+        <ServicesCTA />
+      </section>
+  
     </main>
   );
 }

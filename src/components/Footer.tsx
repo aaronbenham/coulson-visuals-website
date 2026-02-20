@@ -42,12 +42,8 @@ export default function Footer() {
   };
 
   return (
-    <motion.footer
-      initial={{ opacity: 0, y: 10 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.25 }}
-      transition={{ duration: 0.45, ease: "easeOut" }}
-      className="mt-24 border-t border-white/10 bg-black/80 backdrop-blur-xl"
+    <div
+      className="mt-10 border-t border-white/10 bg-black/80 backdrop-blur-xl"
     >
       {/* JSON-LD for SEO */}
       <script
@@ -150,13 +146,13 @@ export default function Footer() {
             <p className="text-xs font-semibold italic tracking-[0.18em] text-white/60">QUICK LINKS</p>
             <ul className="mt-4 space-y-2 text-sm">
               {[
-                { label: "Portfolio", href: "/portfolio" },
+                { label: "Portfolio", href: "https://www.coulsonvisuals.com/" },
                 { label: "Services", href: "/services" },
                 { label: "About", href: "/about" },
                 { label: "Book a shoot", href: "/contact" },
               ].map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className="text-white/80 hover:text-accent transition-colors">
+                  <Link href={l.href} target={l.label === "Portfolio" ? "_blank" : ""} className="text-white/80 hover:text-accent transition-colors">
                     {l.label}
                   </Link>
                 </li>
@@ -175,7 +171,7 @@ export default function Footer() {
               href="/contact"
               className="mt-4 inline-flex w-full items-center justify-center rounded-2xl bg-accent px-5 py-3 text-sm font-semibold text-black transition-all hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-black"
             >
-              Book a shoot
+              Enquire Now
             </Link>
 
             <p className="mt-3 text-xs text-white/50">
@@ -198,6 +194,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </motion.footer>
+    </div>
   );
 }

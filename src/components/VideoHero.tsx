@@ -81,13 +81,14 @@ export default function VideoHero() {
 
             <div className="fade-up fade-delay-3 relative z-30  mt-6 flex flex-col gap-3 sm:flex-row">
               <a
-                href="/contact"
+                href="/services"
                 className="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold bg-accent text-black hover:bg-accent/90"
               >
                 Book a shoot
               </a>
               <a
-                href="/portfolio"
+                href="https://www.coulsonvisuals.com/"
+                target="_blank"
                 className="inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10"
               >
                 View portfolio

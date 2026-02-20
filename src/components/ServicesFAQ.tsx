@@ -36,7 +36,7 @@ export default function ServicesFAQ() {
   return (
     <section id="FAQ">
     <div className="rounded-3xl border border-white/10 bg-white/5 p-6 sm:p-8">
-      <p className="text-xs font-semibold tracking-[0.18em] text-white/60">FAQ</p>
+      <p className="text-xs font-semibold italic tracking-[0.18em] text-white/60">FAQ</p>
       <h2 className="mt-2 text-lg sm:text-xl font-semibold">Quick answers</h2>
       <p className="mt-2 text-sm text-white/70">
         The stuff clients usually ask before booking.

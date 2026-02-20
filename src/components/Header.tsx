@@ -13,6 +13,25 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const showHeader = useScrollDirection();
   const panelRef = useRef<HTMLDivElement | null>(null);
+  const [hoverReveal, setHoverReveal] = useState(false);
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      // Only activate near top of screen
+      if (e.clientY < 80) {
+        setHoverReveal(true);
+      } else {
+        setHoverReveal(false);
+      }
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
 
   // Close on Escape
   useEffect(() => {
@@ -36,8 +55,8 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-transform duration-300 will-change-transform
-      ${(showHeader || open) ? "translate-y-0 shadow-lg shadow-black/20" : "-translate-y-full"}`}
+      className={`fixed top-0 inset-x-0 z-50 transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] will-change-transform
+      ${(showHeader || open || hoverReveal) ? "translate-y-0 shadow-lg shadow-black/20" : "-translate-y-full"}`}
     >
       <div className="pt-[env(safe-area-inset-top)]">
         <div

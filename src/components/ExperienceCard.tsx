@@ -11,9 +11,7 @@ const tiles = [
 
 export default function ExperienceCard() {
   return (
-    <motion.section
-      whileHover={{ y: -4 }}
-      transition={{ type: "spring", stiffness: 380, damping: 30 }}
+    <div
       className="relative rounded-3xl border border-white/10 bg-black/80 backdrop-blur-xl shadow-2xl overflow-hidden"
     >
       {/* Accent glow (subtle, premium) */}
@@ -45,16 +43,16 @@ export default function ExperienceCard() {
 
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <a
-                href="/contact"
+                href="/services"
                 className="inline-flex items-center justify-center rounded-2xl bg-accent px-5 py-3 text-sm font-semibold text-black transition-all hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-black"
               >
                 Book a shoot
               </a>
               <a
-                href="/portfolio"
+                href="/contact"
                 className="inline-flex items-center justify-center rounded-2xl border border-accent/40 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent/10"
               >
-                View portfolio
+                Enquire Now
               </a>
             </div>
           </div>
@@ -90,6 +88,6 @@ export default function ExperienceCard() {
           </div>
         </div>
       </div>
-    </motion.section>
+    </div>
   );
 }

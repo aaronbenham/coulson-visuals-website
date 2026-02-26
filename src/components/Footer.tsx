@@ -12,9 +12,9 @@ export default function Footer() {
   const brand = {
     name: "Coulson Visuals",
     email: "hello@coulsonvisuals.com",
-    phone: "+44 7000 000000",
+    phone: "07982 328217",
     region: "GB",
-    city: "United Kingdom",
+    city: "Newbury, Berkshire",
     website: "https://www.coulsonvisuals.com",
     social: {
       instagram: "https://instagram.com/coulson_visuals",
@@ -146,10 +146,10 @@ export default function Footer() {
             <p className="text-xs font-semibold italic tracking-[0.18em] text-white/60">QUICK LINKS</p>
             <ul className="mt-4 space-y-2 text-sm">
               {[
-                { label: "Portfolio", href: "https://www.coulsonvisuals.com/" },
+                { label: "Portfolio", href: "https://www.coulsonvisualsportfolio.com/" },
                 { label: "Services", href: "/services" },
-                { label: "About", href: "/about" },
-                { label: "Book a shoot", href: "/contact" },
+                { label: "FAQ", href: "/services#FAQ" },
+                { label: "About", href: "/#about" },
               ].map((l) => (
                 <li key={l.href}>
                   <Link href={l.href} target={l.label === "Portfolio" ? "_blank" : ""} className="text-white/80 hover:text-accent transition-colors">

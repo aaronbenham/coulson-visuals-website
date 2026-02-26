@@ -16,11 +16,11 @@ export default function ContactPage() {
         <div className="rounded-3xl border border-white/10 bg-black/70 backdrop-blur-xl shadow-2xl p-8 sm:p-10">
 
           <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight">
-            Enquire Now
+            Contact Us
           </h1>
 
           <p className="mt-3 text-white/75 text-sm sm:text-base leading-relaxed">
-            Have any questions or want to know more? Fill out the form below and
+            Have any questions or want to know more about our services? Fill out the form below and
             I’ll get back to you as soon as possible.
           </p>
 

@@ -78,7 +78,7 @@ const metrics = [
 
 export default function ServicesComparison() {
   return (
-    <div className="rounded-3xl border border-white/10 bg-white/5 p-6 sm:p-8">
+    <div id="services-comparison" className="rounded-3xl border border-white/10 bg-white/5 p-6 sm:p-8">
       <div className="flex items-end justify-between gap-6">
         <div>
           <p className="text-xs font-semibold italic tracking-[0.18em] text-white/60">

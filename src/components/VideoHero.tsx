@@ -87,7 +87,7 @@ export default function VideoHero() {
                 Book a shoot
               </a>
               <a
-                href="https://www.coulsonvisuals.com/"
+                href="https://www.coulsonvisualsportfolio.com/"
                 target="_blank"
                 className="inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10"
               >

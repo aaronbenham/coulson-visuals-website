@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   ArrowUpRight,
@@ -17,8 +18,8 @@ type Service = {
   bullets: string[];
   Icon: React.ComponentType<{ className?: string }>;
   cta: string;
-  href: string;
-  highlight?: boolean; // accent outline + badge
+  href: string; // now points to /services/[slug]
+  highlight?: boolean;
 };
 
 const services: Service[] = [
@@ -33,8 +34,8 @@ const services: Service[] = [
       "All photoshoot content included",
     ],
     Icon: CalendarDays,
-    cta: "Enquire about subscription",
-    href: "/contact",
+    cta: "View details",
+    href: "/services/monthly-subscription",
   },
   {
     title: "Single Video Creation",
@@ -42,8 +43,8 @@ const services: Service[] = [
     subtitle: "Short-form edit",
     bullets: ["One fully edited short-form video", "Optimised for social delivery"],
     Icon: Film,
-    cta: "Book a video",
-    href: "/contact",
+    cta: "View details",
+    href: "/services/single-video",
   },
   {
     title: "Photoshoot Session",
@@ -51,8 +52,8 @@ const services: Service[] = [
     subtitle: "Fast turnaround",
     bullets: ["Best 30 photos included", "48-hour delivery"],
     Icon: Camera,
-    cta: "Book a shoot",
-    href: "/contact",
+    cta: "View details",
+    href: "/services/photoshoot",
   },
   {
     title: "Video + Photoshoot",
@@ -60,9 +61,9 @@ const services: Service[] = [
     subtitle: "Full day capture",
     bullets: ["Full day of shooting", "30 photos included", "1 fully edited short-form video"],
     Icon: Sparkles,
-    cta: "Book a full day",
-    href: "/contact",
-    highlight: true, // ✅ most popular + outlined
+    cta: "View details",
+    href: "/services/video-photoshoot",
+    highlight: true,
   },
 ];
 
@@ -75,7 +76,6 @@ function formatGBP(n: number) {
 }
 
 function addVAT(price: number) {
-  // 20% VAT
   return Math.round(price * 1.2);
 }
 
@@ -108,11 +108,8 @@ export default function ServicesSection() {
               transition={{ type: "spring", stiffness: 420, damping: 28 }}
               className={[
                 "group relative overflow-hidden rounded-2xl p-5",
-                // force equal heights + push button to bottom
                 "flex flex-col",
-                // base styling
                 "border bg-black/40",
-                // highlight variant
                 s.highlight ? "border-accent/60 shadow-[0_0_0_1px_rgba(53,178,223,0.25)]" : "border-white/10",
               ].join(" ")}
             >
@@ -140,7 +137,7 @@ export default function ServicesSection() {
                   </span>
                 </div>
 
-                {/* Price + VAT subtext */}
+                {/* Price + VAT */}
                 <div className="mt-4">
                   <p className="text-2xl font-semibold tracking-tight">{formatGBP(s.price)}</p>
                   <p className="mt-1 text-xs text-white/60">
@@ -158,9 +155,9 @@ export default function ServicesSection() {
                   ))}
                 </ul>
 
-                {/* Spacer pushes CTA to bottom */}
+                {/* CTA */}
                 <div className="mt-auto pt-5">
-                  <a
+                  <Link
                     href={s.href}
                     className={[
                       "inline-flex w-full items-center justify-between rounded-2xl px-4 py-3 text-sm font-semibold",
@@ -178,9 +175,8 @@ export default function ServicesSection() {
                         "group-hover:translate-x-0.5 group-hover:-translate-y-0.5",
                       ].join(" ")}
                     />
-                  </a>
+                  </Link>
 
-                  {/* Bottom rule */}
                   <div className="mt-4 h-px w-full bg-white/10" />
                   <div className="mt-0.5 h-px w-0 bg-accent transition-all duration-300 group-hover:w-full" />
                 </div>

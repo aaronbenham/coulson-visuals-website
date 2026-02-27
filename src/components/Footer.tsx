@@ -58,7 +58,7 @@ export default function Footer() {
           <div>
             <Link href="/" className="inline-flex items-center">
                 <Image
-                    src="/logos/no-background-logo-cropped.png"
+                    src="/logos/no-background-logo-cropped.webp"
                     alt="Coulson Visuals"
                     width={200}
                     height={25}

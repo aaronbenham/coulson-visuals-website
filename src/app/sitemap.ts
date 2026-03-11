@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
+import { siteConfig } from "@/src/lib/site-config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://example.com"; // EXAMPLE
+  const base = siteConfig.siteUrl;
   return [
     { url: `${base}/`, lastModified: new Date() },
     { url: `${base}/portfolio`, lastModified: new Date() },

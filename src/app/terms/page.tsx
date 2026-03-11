@@ -1,3 +1,5 @@
+import { siteConfig } from "@/src/lib/site-config";
+
 export const metadata = {
   title: "Terms of Service | Coulson Visuals",
   description: "Terms of service for Coulson Visuals.",
@@ -66,8 +68,8 @@ export default function TermsPage() {
               <h2 className="text-base font-semibold text-white">Contact</h2>
               <p className="mt-2">
                 Questions about these terms? Email{" "}
-                <a className="text-accent hover:underline" href="mailto:hello@coulsonvisuals.com">
-                  hello@coulsonvisuals.com
+                <a className="text-accent hover:underline" href={`mailto:${siteConfig.contactEmail}`}>
+                  {siteConfig.contactEmail}
                 </a>
                 .
               </p>

@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import { siteConfig } from "@/src/lib/site-config";
+
+import Header from "@/src/components/Header";
+import Footer from "@/src/components/Footer";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://example.com"), // EXAMPLE
+  metadataBase: new URL(siteConfig.siteUrl),
   title: {
     default: "Coulson Visuals | Premium Automotive Photography",
     template: "%s | Coulson Visuals",
@@ -17,7 +19,7 @@ export const metadata: Metadata = {
     description:
       "Premium automotive and exotic car photography for detailers, collectors, and brands.",
     type: "website",
-    url: "https://example.com", // EXAMPLE
+    url: siteConfig.siteUrl,
   },
   robots: { index: true, follow: true },
 };

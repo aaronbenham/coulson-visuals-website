@@ -1,10 +1,10 @@
-import VideoHero from "../components/VideoHero";
-import AutoScrollStrip from "../components/AutoScrollStrip";
-import QualityDial from "../components/QualityDial";
-import ProcessRoadmap from "../components/ServiceSection";
-import ExperienceCard from "../components/ExperienceCard";
-import AboutSection from "../components/AboutSection";
-import ServicesCTA from "../components/ServicesCTA";
+import VideoHero from "@/src/components/VideoHero";
+import AutoScrollStrip from "@/src/components/AutoScrollStrip";
+import QualityDial from "@/src/components/QualityDial";
+import ProcessRoadmap from "@/src/components/ServiceSection";
+import ExperienceCard from "@/src/components/ExperienceCard";
+import AboutSection from "@/src/components/AboutSection";
+import ServicesCTA from "@/src/components/ServicesCTA";
 
 export default function HomePage() {
   return (

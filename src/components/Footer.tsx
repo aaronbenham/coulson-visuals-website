@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { FaTiktok, FaLinkedinIn, FaInstagram } from "react-icons/fa6";
+import { siteConfig } from "@/src/lib/site-config";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -11,15 +11,15 @@ export default function Footer() {
   // TODO: edit these to match your real details
   const brand = {
     name: "Coulson Visuals",
-    email: "hello@coulsonvisuals.com",
-    phone: "07982 328217",
+    email: siteConfig.contactEmail,
+    phone: siteConfig.contactPhone,
     region: "GB",
     city: "Newbury, Berkshire",
-    website: "https://www.coulsonvisuals.com",
+    website: siteConfig.siteUrl,
     social: {
-      instagram: "https://instagram.com/coulson_visuals",
-      tiktok: "https://tiktok.com/@coulson_visuals",
-      linkedin: "https://linkedin.com/in/ben-coulson",
+      instagram: siteConfig.social.instagram,
+      tiktok: siteConfig.social.tiktok,
+      linkedin: siteConfig.social.linkedin,
     },
     // Optional: add actual address later if you want stronger local SEO
   };
@@ -33,12 +33,6 @@ export default function Footer() {
     email: brand.email,
     telephone: brand.phone,
     sameAs: [brand.social.instagram, brand.social.tiktok, brand.social.linkedin].filter(Boolean),
-    // Optional if you add later:
-    // address: {
-    //   "@type": "PostalAddress",
-    //   addressCountry: brand.region,
-    //   addressLocality: "Cheltenham",
-    // },
   };
 
   return (
@@ -127,7 +121,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href={`tel:${brand.phone.replace(/\s/g, "")}`}
+                  href={`tel:${brand.phone.replace(/\s+/g, "")}`}
                   className="text-white/80 hover:text-accent transition-colors"
                 >
                   {brand.phone}
@@ -146,7 +140,7 @@ export default function Footer() {
             <p className="text-xs font-semibold italic tracking-[0.18em] text-white/60">QUICK LINKS</p>
             <ul className="mt-4 space-y-2 text-sm">
               {[
-                { label: "Portfolio", href: "https://www.coulsonvisualsportfolio.com/" },
+                { label: "Portfolio", href: siteConfig.portfolioUrl },
                 { label: "Services", href: "/services" },
                 { label: "FAQ", href: "/services#FAQ" },
                 { label: "About", href: "/#about" },

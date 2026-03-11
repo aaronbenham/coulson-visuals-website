@@ -1,5 +1,7 @@
 "use client";
 
+import { siteConfig } from "@/src/lib/site-config";
+
 import { useEffect, useMemo, useRef, useState } from "react";
 
 function clamp01(n: number) {
@@ -87,7 +89,7 @@ export default function VideoHero() {
                 Book a shoot
               </a>
               <a
-                href="https://www.coulsonvisualsportfolio.com/"
+                href={siteConfig.portfolioUrl}
                 target="_blank"
                 className="inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10"
               >

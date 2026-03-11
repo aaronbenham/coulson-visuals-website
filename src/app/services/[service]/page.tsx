@@ -8,11 +8,11 @@ import {
   priceIncVat,
 } from "../_data";
 
-import ServiceHero from "../../../components/ServiceHero";
-import ServiceDetails from "../../../components/ServiceDetails";
-import ServiceTimeline from "../../../components/ServiceTimeline";
-import ServiceBookPanel from "../../../components/ServiceBookPanel";
-import ServiceFAQMini from "../../../components/ServiceFAQMini";
+import ServiceHero from "@/src/components/ServiceHero";
+import ServiceDetails from "@/src/components/ServiceDetails";
+import ServiceTimeline from "@/src/components/ServiceTimeline";
+import ServiceBookPanel from "@/src/components/ServiceBookPanel";
+import ServiceFAQMini from "@/src/components/ServiceFAQMini";
 
 type Params = { service: string };
 

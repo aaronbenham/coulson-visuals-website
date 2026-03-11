@@ -1,3 +1,5 @@
+import { siteConfig } from "@/src/lib/site-config";
+
 export const metadata = {
   title: "Privacy Policy | Coulson Visuals",
   description: "Privacy policy for Coulson Visuals.",
@@ -77,9 +79,9 @@ export default function PrivacyPage() {
                 For privacy-related requests, contact us at{" "}
                 <a
                   className="text-accent hover:underline"
-                  href="mailto:hello@coulsonvisuals.com"
+                  href={`mailto:${siteConfig.contactEmail}`}
                 >
-                  hello@coulsonvisuals.com
+                  {siteConfig.contactEmail}
                 </a>
                 .
               </p>

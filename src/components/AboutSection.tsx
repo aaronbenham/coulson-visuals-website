@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { siteConfig } from "@/src/lib/site-config";
 
 export default function AboutSection() {
   return (
@@ -52,7 +53,7 @@ export default function AboutSection() {
             <a 
               className="inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
               target="_blank" 
-              href="https://coulsonvisualsportfolio.com/" 
+              href={siteConfig.portfolioUrl}
               rel="noopener noreferrer">
                 View Portfolio
             </a>

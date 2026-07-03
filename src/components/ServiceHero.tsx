@@ -85,20 +85,21 @@ export default function ServiceHero({
           </div>
 
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-            <a
+            {/* <a
               href={onBookHref}
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center rounded-2xl bg-accent px-5 py-3 text-sm font-semibold text-black transition-all hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-black"
             >
               Book via Calendly
-            </a>
+            </a> */}
 
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+              // className="inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+              className="inline-flex items-center justify-center rounded-2xl bg-accent px-5 py-3 text-sm font-semibold text-black transition-all hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-black"
             >
-              Ask a question
+              Enquire Now
             </Link>
 
             <Link

@@ -40,7 +40,6 @@ export default function VideoHero() {
   }, []);
 
   const videoSrc = useMemo(() => media.video, []);
-  console.log(media.video)
 
   return (
     <section ref={heroRef} className="relative h-[100svh] min-h-[640px] overflow-hidden">

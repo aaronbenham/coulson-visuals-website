@@ -1,8 +1,8 @@
 "use client";
 
 import { siteConfig } from "@/src/lib/site-config";
-
 import { useEffect, useMemo, useRef, useState } from "react";
+import { media } from "@/src/lib/site-media";
 
 function clamp01(n: number) {
   return Math.max(0, Math.min(1, n));
@@ -39,7 +39,8 @@ export default function VideoHero() {
     };
   }, []);
 
-  const videoSrc = useMemo(() => "/main-video/audi ad logo white.mp4", []);
+  const videoSrc = useMemo(() => media.video, []);
+  console.log(media.video)
 
   return (
     <section ref={heroRef} className="relative h-[100svh] min-h-[640px] overflow-hidden">

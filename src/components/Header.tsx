@@ -9,6 +9,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useScrollDirection } from "../hooks/useScrollDirection";
 import NavAnchorLink from "./NavAnchorLink";
 
+import { media } from "@/src/lib/site-media";
+
 export default function Header() {
   const [open, setOpen] = useState(false);
   const showHeader = useScrollDirection();
@@ -67,7 +69,7 @@ export default function Header() {
             {/* Logo */}
             <Link href="/" className="z-10 flex items-center" onClick={() => setOpen(false)}>
               <Image
-                src="/logos/no-background-logo-cropped.webp"
+                src={media.logos.noBackgroundCropped}
                 alt="Coulson Visuals logo"
                 width={200}
                 height={25}

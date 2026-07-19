@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaTiktok, FaLinkedinIn, FaInstagram } from "react-icons/fa6";
 import { siteConfig } from "@/src/lib/site-config";
+import { media } from "@/src/lib/site-media";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -52,7 +53,7 @@ export default function Footer() {
           <div>
             <Link href="/" className="inline-flex items-center">
                 <Image
-                    src="/logos/no-background-logo-cropped.webp"
+                    src={media.logos.noBackgroundCropped}
                     alt="Coulson Visuals"
                     width={200}
                     height={25}

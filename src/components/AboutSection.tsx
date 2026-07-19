@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { siteConfig } from "@/src/lib/site-config";
+import { media } from "@/src/lib/site-media";
 
 export default function AboutSection() {
   return (
@@ -18,7 +19,7 @@ export default function AboutSection() {
         {/* Image */}
         <div className="relative aspect-[2/2] max-w-md overflow-hidden rounded-3xl border border-white/10 bg-black/40">
         <Image
-            src="/about/IMG_5642.jpeg"
+            src={media.about}
             alt="Coulson Visuals on set during an automotive shoot"
             fill
             className="object-cover"

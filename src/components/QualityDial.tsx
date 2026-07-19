@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useId, useMemo, useRef, useState } from "react";
-import { motion } from "framer-motion";
 
 type QualityDialProps = {
   beforeSrc: string; // e.g. "/quality/before.webp"

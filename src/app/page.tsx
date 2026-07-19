@@ -5,6 +5,7 @@ import ProcessRoadmap from "@/src/components/ServiceSection";
 import ExperienceCard from "@/src/components/ExperienceCard";
 import AboutSection from "@/src/components/AboutSection";
 import ServicesCTA from "@/src/components/ServicesCTA";
+import { media } from "@/src/lib/site-media";
 
 export default function HomePage() {
   return (
@@ -17,17 +18,17 @@ export default function HomePage() {
 
           <ExperienceCard />
 
-          {/* Cinematic image strip (use your own images) */}
+          {/* Cinematic image strip */}
           <div className="my-6 overflow-hidden rounded-3xl border border-white/10 bg-white/5">
             <AutoScrollStrip
-              images={[
-                { src: "/auto-scroll/amg-1.webp", alt: "AMG detail shot" },
-                { src: "/auto-scroll/brands-hatch-67.webp", alt: "AMG detail shot" },
-                { src: "/auto-scroll/drfit-motogp-4.webp", alt: "AMG detail shot" },
-                { src: "/auto-scroll/amg-2.webp", alt: "AMG detail shot" },
-                { src: "/auto-scroll/mx5-poster-pic-1.webp", alt: "AMG detail shot" },
-                { src: "/auto-scroll/car-motogp.webp", alt: "AMG detail shot" },
-              ]}
+              images={media.autoScroll.map((src) => ({
+                src,
+                alt: src
+                  .split("/")
+                  .pop()
+                  ?.replace(".webp", "")
+                  .replace(/-/g, " ") ?? "Automotive photography",
+              }))}
               speedPxPerSec={32}
             />
           </div>
@@ -41,8 +42,8 @@ export default function HomePage() {
       <section className="relative z-20 -mt-10 sm:-mt-20 py-8">
         <div className="mx-auto max-w-6xl px-4">
           <QualityDial
-            beforeSrc="/quality-dial/before.webp"
-            afterSrc="/quality-dial/after.webp"
+            beforeSrc={media.qualityDial.before}
+            afterSrc={media.qualityDial.after}
           />
         </div>
       </section>

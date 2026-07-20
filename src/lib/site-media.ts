@@ -14,7 +14,6 @@ export const media = {
     logos: {
         black: `${base}/logos/black-logo.webp`,
         noBackgroundCropped: `${base}/logos/no-background-logo-cropped.webp`,
-        noBackground: `${base}/logos/no-background-logo.webp`
     },
     video: `${base}/main-video/audi-s3-25fps-1080p.mp4`,
     qualityDial: {

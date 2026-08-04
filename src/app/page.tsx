@@ -6,10 +6,12 @@ import ExperienceCard from "@/src/components/ExperienceCard";
 import AboutSection from "@/src/components/AboutSection";
 import ServicesCTA from "@/src/components/ServicesCTA";
 import { media } from "@/src/lib/site-media";
+import { Analytics } from "@vercel/analytics/next"
 
 export default function HomePage() {
   return (
     <main>
+      <Analytics/>
       <VideoHero />
 
       {/* EXPERIENCE section that overlaps the video */}

@@ -24,14 +24,13 @@ export default function ContactPage() {
     e.preventDefault();
 
     setLoading(true);
-
-    // Clear any previous status
     setStatus({
       type: null,
       message: "",
     });
 
-    const formData = new FormData(e.target);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
 
     const body = {
       name: formData.get("name"),
@@ -49,20 +48,20 @@ export default function ContactPage() {
         body: JSON.stringify(body),
       });
 
-      console.log(response)
-
       if (!response.ok) {
         throw new Error("Failed to send enquiry.");
       }
+
+      form.reset();
 
       setStatus({
         type: "success",
         message:
           "Thank you for your enquiry. We've received your message and will get back to you as soon as possible.",
       });
+    } catch (error) {
+      console.error(error);
 
-      e.target.reset();
-    } catch {
       setStatus({
         type: "error",
         message:
